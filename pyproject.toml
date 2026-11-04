@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baixar-arquivos-datasus"
+version = "2.1.0"
+description = "Interface gráfica para download dos arquivos PASP do DATASUS"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Sistema de Download DATASUS"}]
+
+[project.scripts]
+datasus-downloader = "baixar_arquivos_datasus.main:main"
+
+[tool.setuptools]
+packages = ["baixar_arquivos_datasus"]
+package-dir = {baixar_arquivos_datasus = "."}
